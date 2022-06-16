@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Projeto - One piece Wiki</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto de Introdução a Tecnologia Web">
+    <meta name="keywords" content="Manga, Anime, One piece">
+    <link rel="stylesheet" href="style.css">
+  
+  <link rel="stylesheet" href="js/jquery.bxslider.css">
+  <link rel="stylesheet" href="js/magnific-popup.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.bxslider.min.js"></script>
+  <script src="js/jquery.magnific-popup.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('.slider').bxSlider({
+      mode: 'horizontal',
+      captions: true,
+    //slideidth: 600,
+      auto: true,
+      pager: true,
+    //speed: 100,
+    //controls: ture
+      })
+
+      $('#galeria-fotos').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: false,
+		closeBtnInside: false,
+		mainClass: 'mfp-with-zoom mfp-img-mobile',
+		image: {
+			verticalFit: true,
+			titleSrc: function(item) {
+				return item.el.attr('title');
+			}
+		},
+		gallery: {
+			enabled: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300, // don't foget to change the duration also in CSS
+			opener: function(element) {
+				return element.find('img');
+			}
+		}
+		
+	});
+
+    });
+  </script>
+</head>
+
+<body>
+
+    <header id="menu">
+        <div class="container">
+            <img src="img/icone-2.png" id="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="interno/anime.html">Anime</a></li>
+                    <li><a href="interno/personagens.html">Personagens</a></li>
+                    <li><a href="interno/habilidades.html">Habilidades</a></li>
+                    <li><a href="interno/curiosidades.html">Curiosidades</a></li>
+                    <li><a href="interno/autor.html">Autor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="banners">
+        <div class="container">
+            <ul class="slider">
+                <li><img src="img/banner5.webp"></li>
+                <li><img src="img/banner4.jpg"></li>
+                <li><img src="img/Banner3.jpeg"></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="alguns-personagens">
+        <div class="container">
+            <h2 class="titulo-secao"> Alguns Personagens </h2>
+            <div id="personagens">
+                <div>
+                    <img src="img/luffy.webp">
+                    <h3>Monkey D. Luffy</h3>
+                    <ul>
+                        <li>também conhecido como Luffy Chapéu de Palha ou Chapéu de Palha, é um pirata e o protagonista do anime e mangá One Piece,  Ele é o fundador e o capitão do cada vez mais infame e poderoso Piratas do Chapéu de Palha </li>                      
+                    </ul>
+                    <img src="img/icone-2.png" id="logo">
+                </div>
+                <div>
+                    <img src="img/zoro.webp">
+                    <h3>Roronoa Zoro</h3>
+                    <ul>
+                        <li>também conhecido como "Caçador de Piratas" Zoro, é o combatente dos Piratas do Chapéu de Palha e um ex-caçador de recompensas. Ele foi o primeiro membro a juntar-se à tripulação. Sua fama como mestre espadachim e sua grande força, juntamente com as ações de seu capitão</li>                       
+                    </ul>
+                    <img src="img/icone-2.png" id="logo">
+                </div>
+                <div>
+                    <img src="img/sanji.webp">
+                    <h3>Vinsmoke Sanji</h3>
+                    <ul>
+                        <li>também conhecido como "Perna Negra" Sanji, e também é o cozinheiro dos Piratas do Chapéu de Palha, assim como um antigo chefe de cozinha do Baratie. Ele também é o terceiro filho e a quarta criança da Família Vinsmoke, tornando-o um príncipe do Reino Germa</li>                    
+                    </ul>
+                    <img src="img/icone-2.png" id="logo">
+                </div>
+                <div>
+                    <img src="img/law.webp">
+                    <h3>Trafalgar D. Water Law</h3>
+                    <ul>
+                        <li>mais comumente conhecido como apenas Trafalgar Law e por seu epíteto como o "Cirurgião da Morte", é um pirata do North Blue e capitão e médico dos Piratas Heart. Ele é um dos doze piratas que são referidos como a "Pior Geração"</li>                      
+                    </ul>
+                    <img src="img/logoLaw.png" id="logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="rodape">
+        <p>Site construído pelo o aluno mais lindo da faculdade</p>
+          <p><a href="http://www.unirios.edu.br">UniRios - Centro Universitário do Rio São Francisco</a></p>
+     
